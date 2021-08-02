@@ -11,6 +11,8 @@ class UserController extends Controller
     public function json()
     {
         $user = User::all();
+        //return ResponseFormatter::success(Datatables::of($user)->make()->getData());
+        //return ResponseFormatter::success($test->getData());
         return Datatables::of($user)->make();
     }
 
